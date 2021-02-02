@@ -1,0 +1,382 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "TEST CNC"
+Date "2021-01-31"
+Rev "v1"
+Comp "CATCUBER"
+Comment1 "GONZALES LOAYZA POOL DIEGO"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 6016F80A
+P 4000 5000
+F 0 "R1" H 4070 5046 50  0000 L CNN
+F 1 "R" H 4070 4955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3930 5000 50  0001 C CNN
+F 3 "~" H 4000 5000 50  0001 C CNN
+	1    4000 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6016FB89
+P 4350 5000
+F 0 "R2" H 4420 5046 50  0000 L CNN
+F 1 "R" H 4420 4955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4280 5000 50  0001 C CNN
+F 3 "~" H 4350 5000 50  0001 C CNN
+	1    4350 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 60172C91
+P 4350 4550
+F 0 "D2" V 4297 4630 50  0000 L CNN
+F 1 "LED" V 4388 4630 50  0000 L CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4350 4550 50  0001 C CNN
+F 3 "~" H 4350 4550 50  0001 C CNN
+	1    4350 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 60173743
+P 4000 4550
+F 0 "D1" V 3947 4630 50  0000 L CNN
+F 1 "LED" V 4038 4630 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 4000 4550 50  0001 C CNN
+F 3 "~" H 4000 4550 50  0001 C CNN
+	1    4000 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L dk_RF-Transceiver-Modules:ESP32-WROOM-32 MOD1
+U 1 1 601754DD
+P 9050 2100
+F 0 "MOD1" H 9250 2403 60  0000 C CNN
+F 1 "ESP32-WROOM-32" H 9250 2297 60  0000 C CNN
+F 2 "digikey-footprints:ESP32-WROOM-32D" H 9250 2300 60  0001 L CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 9250 2400 60  0001 L CNN
+F 4 "1904-1010-1-ND" H 9250 2500 60  0001 L CNN "Digi-Key_PN"
+F 5 "ESP32-WROOM-32" H 9250 2600 60  0001 L CNN "MPN"
+F 6 "RF/IF and RFID" H 9250 2700 60  0001 L CNN "Category"
+F 7 "RF Transceiver Modules" H 9250 2800 60  0001 L CNN "Family"
+F 8 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 9250 2900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/espressif-systems/ESP32-WROOM-32/1904-1010-1-ND/8544305" H 9250 3000 60  0001 L CNN "DK_Detail_Page"
+F 10 "SMD MODULE, ESP32-D0WDQ6, 32MBIT" H 9250 3100 60  0001 L CNN "Description"
+F 11 "Espressif Systems" H 9250 3200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9250 3300 60  0001 L CNN "Status"
+	1    9050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Female J1
+U 1 1 60178ED6
+P 8000 2500
+F 0 "J1" H 8028 2526 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 8028 2435 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 8000 2500 50  0001 C CNN
+F 3 "~" H 8000 2500 50  0001 C CNN
+	1    8000 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J2
+U 1 1 60179AFC
+P 4100 1600
+F 0 "J2" V 3850 1600 50  0000 C CNN
+F 1 "Conn_01x05_Male" V 3950 1600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 4100 1600 50  0001 C CNN
+F 3 "~" H 4100 1600 50  0001 C CNN
+	1    4100 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_MEC_5E SW1
+U 1 1 6017AE92
+P 4100 3850
+F 0 "SW1" H 4100 4235 50  0000 C CNN
+F 1 "SW_MEC_5E" H 4100 4144 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H8.5mm" H 4100 4150 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 4100 4150 50  0001 C CNN
+	1    4100 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Switch:SW_DIP_x02 SW2
+U 1 1 6017B4E0
+P 7900 3400
+F 0 "SW2" H 7900 3767 50  0000 C CNN
+F 1 "SW_DIP_x02" H 7900 3676 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm" H 7900 3400 50  0001 C CNN
+F 3 "~" H 7900 3400 50  0001 C CNN
+	1    7900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 6017CA33
+P 4000 3550
+F 0 "#PWR0101" H 4000 3400 50  0001 C CNN
+F 1 "VCC" H 4015 3723 50  0000 C CNN
+F 2 "" H 4000 3550 50  0001 C CNN
+F 3 "" H 4000 3550 50  0001 C CNN
+	1    4000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6017D592
+P 4000 5350
+F 0 "#PWR0102" H 4000 5100 50  0001 C CNN
+F 1 "GND" H 4005 5177 50  0000 C CNN
+F 2 "" H 4000 5350 50  0001 C CNN
+F 3 "" H 4000 5350 50  0001 C CNN
+	1    4000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Embedded-Microcontrollers:ATMEGA328-AU U2
+U 1 1 6018C92B
+P 5250 1600
+F 0 "U2" H 5578 803 60  0000 L CNN
+F 1 "ATMEGA328-AU" H 5578 697 60  0000 L CNN
+F 2 "digikey-footprints:TQFP-32_7x7mm" H 5450 1800 60  0001 L CNN
+F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en608326" H 5450 1900 60  0001 L CNN
+F 4 "ATMEGA328-AU-ND" H 5450 2000 60  0001 L CNN "Digi-Key_PN"
+F 5 "ATMEGA328-AU" H 5450 2100 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 5450 2200 60  0001 L CNN "Category"
+F 7 "Embedded - Microcontrollers" H 5450 2300 60  0001 L CNN "Family"
+F 8 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en608326" H 5450 2400 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/microchip-technology/ATMEGA328-AU/ATMEGA328-AU-ND/2271029" H 5450 2500 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC MCU 8BIT 32KB FLASH 32TQFP" H 5450 2600 60  0001 L CNN "Description"
+F 11 "Microchip Technology" H 5450 2700 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5450 2800 60  0001 L CNN "Status"
+	1    5250 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3550 4000 3600
+Wire Wire Line
+	4350 4400 4350 4300
+Wire Wire Line
+	4350 4300 4000 4300
+Wire Wire Line
+	4000 4300 4000 4400
+Wire Wire Line
+	4000 4700 4000 4850
+Wire Wire Line
+	4350 4700 4350 4850
+Wire Wire Line
+	4000 5150 4000 5250
+Wire Wire Line
+	4350 5150 4350 5250
+Wire Wire Line
+	4350 5250 4000 5250
+Connection ~ 4000 5250
+Wire Wire Line
+	4000 5250 4000 5350
+Wire Wire Line
+	4000 4050 4000 4300
+Connection ~ 4000 4300
+$Comp
+L power:VCC #PWR0103
+U 1 1 601AF510
+P 7400 3250
+F 0 "#PWR0103" H 7400 3100 50  0001 C CNN
+F 1 "VCC" H 7415 3423 50  0000 C CNN
+F 2 "" H 7400 3250 50  0001 C CNN
+F 3 "" H 7400 3250 50  0001 C CNN
+	1    7400 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3250 7400 3300
+Wire Wire Line
+	7400 3300 7600 3300
+Wire Wire Line
+	7600 3400 7400 3400
+Wire Wire Line
+	7400 3400 7400 3300
+Connection ~ 7400 3300
+Wire Wire Line
+	8200 3300 8550 3300
+Wire Wire Line
+	8200 3400 8550 3400
+Wire Wire Line
+	8200 2300 8550 2300
+Wire Wire Line
+	8200 2400 8550 2400
+Wire Wire Line
+	8200 2500 8550 2500
+Wire Wire Line
+	8200 2600 8550 2600
+Wire Wire Line
+	8200 2700 8550 2700
+Wire Wire Line
+	3900 1800 3900 1900
+Wire Wire Line
+	3900 1900 3350 1900
+Wire Wire Line
+	4000 1800 4000 2000
+Wire Wire Line
+	4000 2000 3350 2000
+Wire Wire Line
+	4100 1800 4100 2300
+Wire Wire Line
+	4100 2300 4750 2300
+Wire Wire Line
+	4200 1800 4200 2200
+Wire Wire Line
+	4200 2200 4750 2200
+Wire Wire Line
+	4300 1800 4300 2100
+Wire Wire Line
+	4300 2100 4750 2100
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 601B891C
+P 3750 3600
+F 0 "#FLG0101" H 3750 3675 50  0001 C CNN
+F 1 "PWR_FLAG" V 3750 3727 50  0000 L CNN
+F 2 "" H 3750 3600 50  0001 C CNN
+F 3 "~" H 3750 3600 50  0001 C CNN
+	1    3750 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 3600 4000 3600
+Connection ~ 4000 3600
+Wire Wire Line
+	4000 3600 4000 3650
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 601BA181
+P 3750 5250
+F 0 "#FLG0102" H 3750 5325 50  0001 C CNN
+F 1 "PWR_FLAG" V 3750 5377 50  0000 L CNN
+F 2 "" H 3750 5250 50  0001 C CNN
+F 3 "~" H 3750 5250 50  0001 C CNN
+	1    3750 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 5250 4000 5250
+NoConn ~ 4100 3650
+NoConn ~ 4100 4050
+NoConn ~ 5250 3900
+NoConn ~ 5350 3900
+NoConn ~ 5450 3900
+NoConn ~ 4750 3700
+NoConn ~ 4750 3600
+NoConn ~ 4750 3500
+NoConn ~ 4750 3400
+NoConn ~ 4750 3300
+NoConn ~ 4750 3200
+NoConn ~ 4750 3100
+NoConn ~ 4750 3000
+NoConn ~ 4750 2900
+NoConn ~ 4750 2700
+NoConn ~ 4750 2600
+NoConn ~ 4750 2500
+NoConn ~ 4750 2400
+NoConn ~ 4750 1200
+NoConn ~ 4750 1300
+NoConn ~ 4750 1400
+NoConn ~ 4750 1500
+NoConn ~ 4750 1600
+NoConn ~ 4750 1700
+NoConn ~ 4750 1800
+NoConn ~ 4750 1900
+NoConn ~ 4750 2000
+NoConn ~ 5250 1000
+NoConn ~ 5350 1000
+NoConn ~ 5450 1000
+NoConn ~ 9950 2200
+NoConn ~ 9950 2300
+NoConn ~ 9950 2400
+NoConn ~ 9250 2000
+NoConn ~ 9950 2600
+NoConn ~ 9950 2500
+NoConn ~ 9950 2700
+NoConn ~ 9950 2800
+NoConn ~ 9950 2900
+NoConn ~ 9950 3000
+NoConn ~ 9950 3100
+NoConn ~ 9950 3300
+NoConn ~ 9950 3400
+NoConn ~ 9950 3500
+NoConn ~ 9950 3600
+NoConn ~ 8550 2200
+NoConn ~ 8550 2800
+NoConn ~ 8550 2900
+NoConn ~ 8550 3000
+NoConn ~ 8550 3100
+NoConn ~ 8550 3200
+NoConn ~ 8550 3500
+NoConn ~ 8550 3600
+NoConn ~ 8550 3700
+NoConn ~ 8550 3800
+NoConn ~ 8550 3900
+NoConn ~ 8550 4000
+NoConn ~ 9050 4200
+NoConn ~ 9150 4200
+NoConn ~ 9250 4200
+NoConn ~ 9350 4200
+$Comp
+L Timer_RTC:DS1302+ U1
+U 1 1 601DB0D1
+P 2850 2100
+F 0 "U1" H 3394 2146 50  0000 L CNN
+F 1 "DS1302+" H 3394 2055 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2850 1600 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DS1302.pdf" H 2850 1900 50  0001 C CNN
+	1    2850 2100
+	-1   0    0    1   
+$EndComp
+NoConn ~ 2850 1700
+NoConn ~ 3350 2200
+NoConn ~ 3350 2300
+NoConn ~ 2950 2500
+NoConn ~ 2850 2500
+NoConn ~ 2350 2300
+$Comp
+L Comparator:LM393 U3
+U 1 1 601E22F3
+P 3000 3100
+F 0 "U3" H 3000 3467 50  0000 C CNN
+F 1 "LM393" H 3000 3376 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-8_W3.9mm" H 3000 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm393.pdf" H 3000 3100 50  0001 C CNN
+	1    3000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 3000 2600 3000
+Wire Wire Line
+	2600 3000 2600 2650
+Wire Wire Line
+	2600 2650 3350 2650
+Wire Wire Line
+	3350 2650 3350 3100
+Wire Wire Line
+	3350 3100 3300 3100
+Wire Wire Line
+	2700 3200 2600 3200
+Wire Wire Line
+	2600 3200 2600 3400
+Wire Wire Line
+	2600 3400 3750 3400
+Wire Wire Line
+	3750 3400 3750 2800
+Wire Wire Line
+	3750 2800 4750 2800
+$EndSCHEMATC
